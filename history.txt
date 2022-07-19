@@ -1,0 +1,191 @@
+    1  1s
+    2  pwd
+    3  ls
+    4  pwd
+    5  pwd
+    6  ls
+    7  ls -l
+    8  ls -h
+    9  ls -lh
+   10  cd Desktop
+   11  pwd
+   12  cd ~
+   13  cd Desktop
+   14  cd desktop
+   15  cd Desktop
+   16  cd ..
+   17  pwd
+   18  cd -
+   19  cd lcw2022
+   20  pwd
+   21  cd ..
+   22  cd ..
+   23  cd -
+   24  cd -
+   25  cd Desktop
+   26  cd lcw2022
+   27  ls --help
+   28  ls --size
+   29  ls -s
+   30  ls -lS
+   31  cd shell-lesson
+   32  pwd
+   33  cd ..
+   34  cd ..
+   35  cd lcw2022/shell-lesson
+   36  mkdir firstdir
+   37  ls
+   38  cd firstdir
+   39  ls
+   40  cd ..
+   41  cd firstdir/
+   42  cd ..
+   43  ls -lh
+   44  cat 829-0.txt
+   45  head
+   46  pwd
+   47  head 829.0.txt
+   48  head 829-0.txt
+   49  less 92==829-0.txt
+   50  less 829-0.txt
+   51  cd Desktop
+   52  ls
+   53  cd shell-lesson
+   54  head *.txt
+   55  head *.pdf
+   56  mv 829-0.txt gulliver.txt
+   57  ls
+   58  cp gulliver.txt gulliver-backup.txt
+   59  ls
+   60  mv firstdir backup
+   61  ls
+   62  mkdir firstdir
+   63  mv firstdir backup
+   64  mv guilliver-backup.txt backup
+   65  mv gulliver-backup.txt backup
+   66  history > history.txt
+   67  ls
+   68  head history.txt
+   69  echo "Library Carpentry is Awesome"
+   70  NAME= "Marla"
+   71  NAME="Marla"
+   72  echo "$NAME is a fantastic library student!"
+   73  echo $NAME
+   74  echo "It is always sunny in Texas. Today it is" $(date)
+   75  pwd
+   76  ls
+   77   touch a.txt b.txt c.txt d.txt
+   78  ls
+   79  for filename in ?.txt; do echo "$filename"; cp "$filename" backup_"$filename"; done
+   80  ls
+   81  ls -lh
+   82  for filename in *.txt; do  echo "$filename"; head -n 1 "$filename"; tail -n 1 "$filename"; done
+   83  pwd
+   84  ls -lhS
+   85  wc *.tsv 
+   86  wc -l *.tsv
+   87  wc -l *.tsv > lengths.txt
+   88  ls
+   89  cat lenghts.txt
+   90  cat lengths.txt
+   91  sorn -n lengths.txt
+   92  sort -n lengths.txt
+   93  sort -n lengths.txt > sorted-lengths.txt
+   94  cat sorted-lengths.txt
+   95  wc -l *.tsv | sort -n | head -n 1
+   96  wc -w >tsv | sort -n | tail -n 10
+   97  wc -w *tsv | sort -n | tail -n 10
+   98  wc -l *.tsv | sort -n | tail -n 10
+   99  wc -w *.tsv | sort -n | tail
+  100  wc -w *.tsv | sort -n | tail -n 11
+  101  $date
+  102  ls $date
+  103  ls
+  104  ls .tsv
+  105  ls *tsv
+  106  ls *tsv | wc  -w 
+  107  ls | wc  -w *.tsv
+  108  date
+  109  echo date > logfile.txt
+  110  cat
+  111  cat logfile.txt
+  112  echo $date > logfile.txt
+  113  cat logfile.txt
+  114  date
+  115  date > logfile.txt
+  116  cat logfile.txt
+  117  date >> logfile.txt
+  118  cat logfile.txt
+  119  mkdir results
+  120  ls
+  121  grep 1999 *.tsv
+  122  grep -c 1999 *.tsv
+  123  grep  -c revolution *.tsv
+  124  grep -ci revolution *.tsv
+  125  grep -ci revolution *.tsv > results/revolution-count.txt
+  126  cat results/revolution-count.txt
+  127  grep -i revolution *.tsv
+  128  grep -ci revolution *.tsv > results/$(date "+%Y-%m-%d)_revolution-count.txt
+  129  grep -ci revolution *.tsv > results/$(date "+%Y-%m-%d")_revolution-count.tsv
+  130  grep -ci revolution *.tsv > results/$date "+%Y-%m-%d")_revolution-count.tsv
+  131  grep -ci revolution *.tsv > results/$(date "+%Y-%m-%d")_revolution-count.tsv
+  132  cd results
+  133  ls
+  134  grep -ci banana *.tsv
+  135  grep -ci country *.tsv
+  136  grep -ci revolution
+  137  cd ..
+  138  grep -ci banana *.tsv
+  139  grep -c banana *.tsv
+  140  grep -w banana *.tsv
+  141  ls
+  142  grep -ci banana "2014-01-31_JA-africa.tsv" "2014-01-31_JA-america.tsv"
+  143  grep -c America "2014-01-31_JA-africa.tsv" "2014-01-31_JA-america.tsv"
+  144  grep -c America *.tsv > America-count.txt
+  145  ls
+  146  grep -p "\d\d\d\d-\d\d\d\d"
+  147  grep -P "\d\d\d\d-\d\d\d\d" *.tsv
+  148  grep -c "\d\d\d\d-\d\d\d\d" *.tsv
+  149  grep -P "\d\d\d\d-\d\d\d\d" *.tsv
+  150  grep -Po '\d{4}-\d{4}' 2014-01-ja.tsv
+  151  grep -Po '\d{4}-\d{4}' 2014-01-31_JA-america.tsv
+  152  for name in "Jo" "Meg" "Beth" "Amy"; do echo "$name"; grep -wo "$name" littlewomen.txt | wc-1; done
+  153  for name in "Jo" "Meg" "Beth" "Amy"; do echo "$name"; grep -wo "$name" littlewomen.txt | wc -1; done
+  154  pwd
+  155  history > history.txt
+  156  ls
+  157  git config --list
+  158  cd desktop/lcw2022/shell-lesson
+  159  git config --list
+  160  git config --global user.name "Marla Hertz"
+  161  git config --global user.email "mihertz@uab.edu"
+  162  git config --list
+  163  cd ..
+  164  cd..
+  165  cd ..
+  166  mkdir hello-world
+  167  ls
+  168  cd hello-world/
+  169  ls
+  170  git init
+  171  ls -a
+  172  git config --global init.defaultbranch "main"
+  173  git status
+  174  touch index.md
+  175  git status
+  176  git config --global init.defaultbranch "main"
+  177  git config --global init
+  178  git add index.md
+  179  git status
+  180  git commit -m 'add index.md'
+  181  cd ..
+  182  cd lcw2022
+  183  pwd
+  184  git init
+  185  ls -a
+  186  git status
+  187  git add .
+  188  gitstatus
+  189  git status
+  190  git commit -m 'add day 1 files'
+  191  history > history.txt
